@@ -68,6 +68,7 @@ _______________________
 
 	### disable password authentication
 		sudo nano /etc/ssh/sshd_config - change passwordAuthentication to no
+		set PermitRootLogin to no
 		sudo service ssh restart
 
 _______________________
@@ -108,7 +109,8 @@ _______________________
 		sudo nano /etc/apache2/sites-available/catalog.conf
 
 		<VirtualHost *:80>
-    	ServerName 165.227.16.72
+    	ServerName 54.227.80.22
+    	ServerAlias 54.227.80.22.xip.io
 
     	WSGIScriptAlias / /var/www/catalog/wsgi.py
 
@@ -145,3 +147,9 @@ _______________________
 		Download the new client_secrets.json and put it into catalog folder
 
 ## Now Run the application:  http://54.227.80.22.xip.io
+
+## A list of used third-party resources as references to build this project is required.
+
+Udacity videos
+Stack overflow
+github projects
